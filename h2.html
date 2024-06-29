@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h2</title>
+    <style>
+        /* table, th, td {
+            border: 1px solid black;
+        } */
+/* [target] adalah atribut target yang ada di elemen a href */
+        a[target]{
+            background-color: yellow;
+        }
+        #judul{
+            /* rgb adalah red green blue */
+            color: rgb(0,0,255);
+        }
+        .paragraf{
+            /* hsl adalah hue, saturation, lightness value */
+            color: hsl(360, 100%, 75%);
+        }
+        .container{
+            border: 5px solid #ffcc5c;
+            display: flex;
+            /* membuat tulisan berada di kanan */
+            justify-content: flex-end;
+        }
+        .container > div{
+            padding: 10px;
+            text-align: center;
+            font-size: 14sp;
+            color: #ffeead;
+            border: 2px solid;
+            background-color: green;
+        }
+        .contoh{
+            background-color: lightblue;
+            width: 800px;
+            height: 100px;
+            margin-left: 300px;
+        }
+        div > .border{
+            color: white;
+            background-color: blue;
+            padding: 30px;
+            border: 20px ridge yellow;
+
+        }
+        .content{
+            flex-direction: row;
+            display: flex;
+        }
+        .content > div{
+            display: flex;
+            /* flex:1 membuat agar seimbang menjadi 5050 ukurannya */
+            flex: 1;
+            align-content: center;
+            justify-content: center;
+        }
+        .table_person{
+            border: 1px solid rgb(218, 218, 218);
+            border-spacing: 0px;
+
+        }
+        th,td{
+            border: 1px solid rgb(158, 158, 158);
+            padding: 10px;
+        }
+        .title1{
+            background-color: rgb(180, 180, 180);
+
+        }
+        footer > p{
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bahasa pemrograman untuk dipelajari</h1>
+    <ul>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Kotin</li>
+    </ul>    
+    <h1>Buah Favorite</h1>
+    <ol>
+        <li>Pepaya</li>
+        <li>Durian</li>
+        <li>Pisang</li>
+        <li>Jeruk</li>
+        <li>Mangga</li>
+    </ol>
+
+    <h1>Create table with HTML</h1>
+    <!-- <table class="pertama">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Elsha Tambuwun</td>
+            <td>Arwin Pangaila</td>
+            <td>swiss</td>
+        </tr>
+        <tr>
+            <td>Arwin Pangaila</td>
+            <td>Elsha Tambuwun</td>
+            <td>korean</td>
+        </tr>
+    </table>
+    <br>
+    <table> -->
+        <tr>
+            <th>Asal</th>
+            <th>Domisili</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>Swiss</center>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Form</h1>
+    <!-- action adalah pindah halaman atau submit ke halaman lain -->
+    <!-- action itu setelah linknya di submit akan kemana -->
+    <!-- method bisa post dan get -->
+    <!-- input get input datanya akan terlihat di halaman url-->
+    <!-- post tidak akan terlihat -->
+    <form action="https://www.google.co.id/?hl=id" method="GET">
+        <!-- required adalah yang harus diisi tidak boleh dilewati -->
+        <input type="password" required>
+        <input type="number" min="1" max="10">
+
+
+        <br>
+        <p>warna Favorite</p>
+        <select>
+            <option>Merah</option>
+            <option>Kuning</option>
+            <option>Hijau</option>
+            <!-- selected adalah semacam nilai defaultnya -->
+            <option selected>Biru</option>
+        </select>
+
+    
+
+        <br>
+
+        <input type="radio" value="HTML" name="fav_language" id="html">
+        <label for="HTML">HTML</label><br>
+        
+        <input type="radio" value="CSS" name="fav_language" id="css">
+        <label for="CSS">CSS</label><br>
+        
+        <input type="radio" value="JavaScript" name="fav_language" id="JavaScript">
+        <label for="JavaScript">JavaScript</label><br>
+        
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <br>
+    <h1>option group</h1>
+    <p>Minuman Favorite</p>
+    <select>
+        <optgroup label="jus buah">
+            <option>jus apel</option>
+            <option>jus jeruk</option>
+            <option>jus mangga</option>
+        </optgroup>
+        <optgroup label="jamu">
+            <option>kencur</option>
+            <option>asem</option>
+            <option>brotowali</option>
+        </optgroup>
+    </select>
+<br>
+<a href="https://www.google.com/" target="_blank">Google</a><br>
+
+<br>
+<h1 id="judul">RevoU</h1>
+<p class="paragraf">ini paragraf</p>
+<br>
+
+<nav class="container">
+    <div class="home">home</div>
+    <div class="search">search</div>
+    <div class="logout">logout<div>
+</nav>
+
+<br>
+<div class="contoh">
+    <h1 class="border">contoh border</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+==========================================================================================================================<br>
+
+<header>
+    <h1>Latihan pertama</h1>
+
+</header>
+<main class="content">
+    <div>
+        <p>
+            <label for="name">Nama : </label>
+            <input type="text" name="nama" id="nama"><br>
+            <label for="date">Tanggal Lahir : </label>
+            <label><input type="date" name="date" id="date"></label><br>
+            <span>Jenis Kelamin : </span>
+            <label><input type="radio" name="lelaki" value="lelaki">Laki-Laki</label>
+            <label><input type="radio" name="wanita" id="wanita">Perempuan</label><br>
+            <label for="pesan">Pesan : </label>
+             pesan" id="pesan" placeholder="Pesan"></label><br>
+            <input type="submit" value="submit">
+        </p>
+
+    </div>
+
+    <div>
+        <table class="table_person">
+            <tr class="title1">
+                <th>Nama</th>
+                <th>tanggal lahir</th>
+                <th>jenis kelamin</th>
+                <th>pesan</th>
+                <th>profile</th>
+                <th>hapus</th>
+            </tr>
+            <tr>
+                <td>ada lovelace</td>
+                <td>20 july 2004</td>
+                <td>perempuan</td>
+                <td>belajar buat website</td>
+                <td><a href="">klik disini</a></td>
+                <td>hapus</td>
+            </tr>
+            <tr>
+                <td>grace hopper</td>
+                <td>9 july 2005</td>
+                <td>perempuan</td>
+                <td>hello world</td>
+                <td><a href="">klik disini</a></td>
+                <td>hapus</td>
+            </tr>
+            <tr>
+                <td>margaret</td>
+                <td>17 agustus 1889</td>
+                <td>perempuan</td>
+                <td>test dulu</td>
+                <td><a href="">klik disini</a></td>
+                <td>hapus</td>
+            </tr>
+            <tr>
+                <td>joan clark</td>
+                <td>24 juni 1917</td>
+                <td>lelaki</td>
+                <td>selalu semangat</td>
+                <td><a href="">klik disini</a></td>
+                <td>hapus</td>
+            </tr>
+        </table>
+    </div>
+    
+</main>
+<footer>
+    <hr>
+    <p>latihan 1 RevoU</p>
+    <hr>
+</footer>
+</body>
+</html>
